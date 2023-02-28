@@ -1,0 +1,3408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.7.8</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.xy</groupId>
+	<artifactId>xyserver</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>server</name>
+	<description></description>
+	<properties>
+		<java.version>1.8</java.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-log4j</artifactId>
+		    <version>1.3.8.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.72</version>
+		</dependency> 
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Ads0SoaAdsFoundationLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Ads0SoaAdsFoundationLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Ads0SoaAdsFoundationStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Ads0SoaAdsFoundationStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Ads0SoaAdsFoundationTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Ads0SoaAdsFoundationTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Aed0SoaStrongModelAutomationElectricDesign_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Aed0SoaStrongModelAutomationElectricDesign_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Ap0SoaStrongModelAdvancePlanner_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Ap0SoaStrongModelAdvancePlanner_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Apb0SoaStrongModelAttrParmBase_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Apb0SoaStrongModelAttrParmBase_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Aps0SoaStrongModelApsCore_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Aps0SoaStrongModelApsCore_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Asp0SoaAspectLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Asp0SoaAspectLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Asp0SoaAspectStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Asp0SoaAspectStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Asp0SoaAspectTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Asp0SoaAspectTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Asp0SoaStrongModelAspect_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Asp0SoaStrongModelAspect_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Att0SoaAttrTargetMgmtLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Att0SoaAttrTargetMgmtLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Att0SoaAttrTargetMgmtStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Att0SoaAttrTargetMgmtStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Att0SoaAttrTargetMgmtTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Att0SoaAttrTargetMgmtTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Att0SoaStrongModelAttrTargetMgmt_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Att0SoaStrongModelAttrTargetMgmt_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Bdo0SoaStrongModelBranchDataOrganization_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Bdo0SoaStrongModelBranchDataOrganization_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Bhv0SoaBranchFoundationLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Bhv0SoaBranchFoundationLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Bhv0SoaBranchFoundationStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Bhv0SoaBranchFoundationStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Bhv0SoaBranchFoundationTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Bhv0SoaBranchFoundationTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Bhv0SoaStrongModelBranchfoundation_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Bhv0SoaStrongModelBranchfoundation_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Bom0SoaBomCoreLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Bom0SoaBomCoreLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Bom0SoaBomCoreStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Bom0SoaBomCoreStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Bom0SoaBomCoreTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Bom0SoaBomCoreTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Bom0SoaStrongModelBomManagement_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Bom0SoaStrongModelBomManagement_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>CAE0SoaSimProcLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/CAE0SoaSimProcLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>CAE0SoaSimProcStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/CAE0SoaSimProcStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>CAE0SoaSimProcTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/CAE0SoaSimProcTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>CAE0SoaStrongModelSimProc_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/CAE0SoaStrongModelSimProc_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Cba1SoaCbaExtLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Cba1SoaCbaExtLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Cba1SoaCbaExtStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Cba1SoaCbaExtStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Cba1SoaCbaExtTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Cba1SoaCbaExtTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Cbm0SoaColorBomPmmLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Cbm0SoaColorBomPmmLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Cbm0SoaColorBomPmmStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Cbm0SoaColorBomPmmStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Cbm0SoaColorBomPmmTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Cbm0SoaColorBomPmmTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Cbm0SoaStrongModelColorBomPmm_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Cbm0SoaStrongModelColorBomPmm_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Cdm0SoaContractManagementLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Cdm0SoaContractManagementLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Cdm0SoaContractManagementStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Cdm0SoaContractManagementStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Cdm0SoaContractManagementTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Cdm0SoaContractManagementTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Cfg0SoaConfiguratorLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Cfg0SoaConfiguratorLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Cfg0SoaConfiguratorStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Cfg0SoaConfiguratorStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Cfg0SoaConfiguratorTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Cfg0SoaConfiguratorTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Cfg0SoaStrongModelConfigurator_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Cfg0SoaStrongModelConfigurator_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Cfg1SoaStrongModelConfigurator_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Cfg1SoaStrongModelConfigurator_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Civ0SoaContMgmtS1000D40Loose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Civ0SoaContMgmtS1000D40Loose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Civ0SoaContMgmtS1000D40Strong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Civ0SoaContMgmtS1000D40Strong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Civ0SoaContMgmtS1000D40Types_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Civ0SoaContMgmtS1000D40Types_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Clr0SoaColorAppearanceLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Clr0SoaColorAppearanceLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Clr0SoaColorAppearanceStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Clr0SoaColorAppearanceStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Clr0SoaColorAppearanceTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Clr0SoaColorAppearanceTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Clr0SoaStrongModelColorAppearance_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Clr0SoaStrongModelColorAppearance_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Clr1SoaStrongModelColorRule_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Clr1SoaStrongModelColorRule_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Cls0SoaClassificationCoreLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Cls0SoaClassificationCoreLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Cls0SoaClassificationCoreStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Cls0SoaClassificationCoreStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Cls0SoaClassificationCoreTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Cls0SoaClassificationCoreTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>com.teamcenter.rac.aif.registryeditor_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/com.teamcenter.rac.aif.registryeditor_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>com.teamcenter.rac.aifrcp_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/com.teamcenter.rac.aifrcp_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>com.teamcenter.rac.kernel.testing_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/com.teamcenter.rac.kernel.testing_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>com.teamcenter.rac.kernel_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/com.teamcenter.rac.kernel_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>com.teamcenter.rac.util.testing_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/com.teamcenter.rac.util.testing_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>com.teamcenter.rac.util_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/com.teamcenter.rac.util_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>commons-httpclient-contrib-3.1</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/commons-httpclient-contrib-3.1.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Cp0SoaStrongModelComposites_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Cp0SoaStrongModelComposites_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>CPA0SoaStrongModelCapaDataModel_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/CPA0SoaStrongModelCapaDataModel_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Cpd0SoaCpdCoreLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Cpd0SoaCpdCoreLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Cpd0SoaCpdCoreStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Cpd0SoaCpdCoreStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Cpd0SoaCpdCoreTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Cpd0SoaCpdCoreTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Crf0SoaStrongModelCprFoundation_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Crf0SoaStrongModelCprFoundation_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Crt0SoaStrongModelValidationContract_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Crt0SoaStrongModelValidationContract_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Crt0SoaValidationContractLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Crt0SoaValidationContractLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Crt0SoaValidationContractStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Crt0SoaValidationContractStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Crt0SoaValidationContractTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Crt0SoaValidationContractTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Dia0SoaDiagrammingLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Dia0SoaDiagrammingLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Dia0SoaDiagrammingStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Dia0SoaDiagrammingStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Dia0SoaDiagrammingTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Dia0SoaDiagrammingTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Esm0SoaESMBaseLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Esm0SoaESMBaseLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Esm0SoaESMBaseStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Esm0SoaESMBaseStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Esm0SoaESMBaseTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Esm0SoaESMBaseTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Esw0SoaStrongModelEsmgmt_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Esw0SoaStrongModelEsmgmt_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>fccclient</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/fccclient.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Fdp0SoaFourDPlanningLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Fdp0SoaFourDPlanningLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Fdp0SoaFourDPlanningStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Fdp0SoaFourDPlanningStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Fdp0SoaFourDPlanningTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Fdp0SoaFourDPlanningTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Fdp0SoaStrongModelFourDPlanning_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Fdp0SoaStrongModelFourDPlanning_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Fnd0SoaAuditManagerLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Fnd0SoaAuditManagerLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Fnd0SoaAuditManagerStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Fnd0SoaAuditManagerStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Fnd0SoaAuditManagerTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Fnd0SoaAuditManagerTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Fnd0SoaConfigFilterCriteriaLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Fnd0SoaConfigFilterCriteriaLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Fnd0SoaConfigFilterCriteriaStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Fnd0SoaConfigFilterCriteriaStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Fnd0SoaConfigFilterCriteriaTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Fnd0SoaConfigFilterCriteriaTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Fnd0SoaDiagrammingLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Fnd0SoaDiagrammingLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Fnd0SoaDiagrammingStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Fnd0SoaDiagrammingStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Fnd0SoaDiagrammingTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Fnd0SoaDiagrammingTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Fnd0SoaEditContextLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Fnd0SoaEditContextLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Fnd0SoaEditContextStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Fnd0SoaEditContextStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Fnd0SoaEditContextTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Fnd0SoaEditContextTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Fnd0SoaNotificationLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Fnd0SoaNotificationLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Fnd0SoaNotificationStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Fnd0SoaNotificationStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Fnd0SoaNotificationTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Fnd0SoaNotificationTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Fnd0SoaParticipantLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Fnd0SoaParticipantLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Fnd0SoaParticipantStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Fnd0SoaParticipantStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Fnd0SoaParticipantTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Fnd0SoaParticipantTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Fnd0SoaQualificationLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Fnd0SoaQualificationLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Fnd0SoaQualificationStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Fnd0SoaQualificationStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Fnd0SoaQualificationTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Fnd0SoaQualificationTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Fnd0SoaUiConfigLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Fnd0SoaUiConfigLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Fnd0SoaUiConfigStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Fnd0SoaUiConfigStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Fnd0SoaUiConfigTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Fnd0SoaUiConfigTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Fnd0SoaWProxyLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Fnd0SoaWProxyLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Fnd0SoaWProxyStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Fnd0SoaWProxyStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Fnd0SoaWProxyTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Fnd0SoaWProxyTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>fscclient</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/fscclient.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>httpclient-4.5.2</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/httpclient-4.5.2.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>httpcore-4.4.4</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/httpcore-4.4.4.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Lbr0SoaLibraryManagementLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Lbr0SoaLibraryManagementLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Lbr0SoaLibraryManagementStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Lbr0SoaLibraryManagementStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Lbr0SoaLibraryManagementTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Lbr0SoaLibraryManagementTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Les0SoaStrongModelLisesm_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Les0SoaStrongModelLisesm_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Lgt0SoaLogisticsLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Lgt0SoaLogisticsLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Lgt0SoaLogisticsStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Lgt0SoaLogisticsStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Lgt0SoaLogisticsTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Lgt0SoaLogisticsTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Lgt0SoaStrongModelLogistics_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Lgt0SoaStrongModelLogistics_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Lis0SoaLdfLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Lis0SoaLdfLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Lis0SoaLdfStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Lis0SoaLdfStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Lis0SoaLdfTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Lis0SoaLdfTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Lis0SoaStrongModelLdf_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Lis0SoaStrongModelLdf_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>log4j-api-2.8.2</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/log4j-api-2.8.2.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>log4j-core-2.8.2</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/log4j-core-2.8.2.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Lrm0SoaStrongModelLisrm_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Lrm0SoaStrongModelLisrm_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Mat1SoaMaterialMgmtLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Mat1SoaMaterialMgmtLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Mat1SoaMaterialMgmtStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Mat1SoaMaterialMgmtStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Mat1SoaMaterialMgmtTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Mat1SoaMaterialMgmtTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Mci0SoaPMIManagementLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Mci0SoaPMIManagementLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Mci0SoaPMIManagementStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Mci0SoaPMIManagementStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Mci0SoaPMIManagementTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Mci0SoaPMIManagementTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Mci0SoaStrongModelPMIManagement_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Mci0SoaStrongModelPMIManagement_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Mdc0SoaMDConnectivityLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Mdc0SoaMDConnectivityLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Mdc0SoaMDConnectivityStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Mdc0SoaMDConnectivityStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Mdc0SoaMDConnectivityTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Mdc0SoaMDConnectivityTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Mdl0SoaModelCoreLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Mdl0SoaModelCoreLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Mdl0SoaModelCoreStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Mdl0SoaModelCoreStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Mdl0SoaModelCoreTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Mdl0SoaModelCoreTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Mdo0SoaMDOManagementLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Mdo0SoaMDOManagementLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Mdo0SoaMDOManagementStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Mdo0SoaMDOManagementStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Mdo0SoaMDOManagementTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Mdo0SoaMDOManagementTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Mdo0SoaStrongModelMdo_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Mdo0SoaStrongModelMdo_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Mei0SoaMESIntegLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Mei0SoaMESIntegLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Mei0SoaMESIntegStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Mei0SoaMESIntegStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Mei0SoaMESIntegTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Mei0SoaMESIntegTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Mei0SoaStrongModelMESInteg_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Mei0SoaStrongModelMESInteg_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Nxc0SoaTcinCpdLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Nxc0SoaTcinCpdLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Nxc0SoaTcinCpdStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Nxc0SoaTcinCpdStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Nxc0SoaTcinCpdTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Nxc0SoaTcinCpdTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Oo1SoaOfficeOnlineLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Oo1SoaOfficeOnlineLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Oo1SoaOfficeOnlineStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Oo1SoaOfficeOnlineStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Oo1SoaOfficeOnlineTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Oo1SoaOfficeOnlineTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Ord0SoaStrongModelOrderManagement_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Ord0SoaStrongModelOrderManagement_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Osl0SoaStrongModelLISOSLC_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Osl0SoaStrongModelLISOSLC_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Pdg0SoaStrongModelPtnDesignGdlines_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Pdg0SoaStrongModelPtnDesignGdlines_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Pmg0SoaStrongModelCpMgmt_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Pmg0SoaStrongModelCpMgmt_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Prg0SoaProgramInfraLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Prg0SoaProgramInfraLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Prg0SoaProgramInfraStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Prg0SoaProgramInfraStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Prg0SoaProgramInfraTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Prg0SoaProgramInfraTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Prg0SoaStrongModelProgramInfra_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Prg0SoaStrongModelProgramInfra_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Prg1SoaProgramPlanningAppLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Prg1SoaProgramPlanningAppLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Prg1SoaProgramPlanningAppStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Prg1SoaProgramPlanningAppStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Prg1SoaProgramPlanningAppTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Prg1SoaProgramPlanningAppTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Prg1SoaStrongModelProgramPlanningApp_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Prg1SoaStrongModelProgramPlanningApp_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Ptn0SoaPartitionLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Ptn0SoaPartitionLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Ptn0SoaPartitionStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Ptn0SoaPartitionStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Ptn0SoaPartitionTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Ptn0SoaPartitionTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Qc0SoaStrongModelQualityCenterBase_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Qc0SoaStrongModelQualityCenterBase_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Rlz0SoaRealizationLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Rlz0SoaRealizationLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Rlz0SoaRealizationStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Rlz0SoaRealizationStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Rlz0SoaRealizationTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Rlz0SoaRealizationTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>SAS0SoaSvcAutoSchedulingLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/SAS0SoaSvcAutoSchedulingLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>SAS0SoaSvcAutoSchedulingStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/SAS0SoaSvcAutoSchedulingStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>SAS0SoaSvcAutoSchedulingTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/SAS0SoaSvcAutoSchedulingTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Smc0SoaStrongModelPsMcfgSupport_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Smc0SoaStrongModelPsMcfgSupport_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Smc0SoaStructureManagementLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Smc0SoaStructureManagementLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Smc0SoaStructureManagementStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Smc0SoaStructureManagementStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Smc0SoaStructureManagementTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Smc0SoaStructureManagementTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Srh0SoaStrongModelApsConfiguredSearch_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Srh0SoaStrongModelApsConfiguredSearch_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>SSF0SoaServiceForecastingLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/SSF0SoaServiceForecastingLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>SSF0SoaServiceForecastingStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/SSF0SoaServiceForecastingStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>SSF0SoaServiceForecastingTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/SSF0SoaServiceForecastingTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>SSF0SoaStrongModelServiceForecasting_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/SSF0SoaStrongModelServiceForecasting_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Ssm0SoaStrongModelSystemSynthesisModeling_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Ssm0SoaStrongModelSystemSynthesisModeling_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>SSP0SoaStrongModelServicePlanning_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/SSP0SoaStrongModelServicePlanning_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>SSS0SoaStrongModelServiceScheduling_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/SSS0SoaStrongModelServiceScheduling_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>SSS0SoaSvcSchedulingLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/SSS0SoaSvcSchedulingLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>SSS0SoaSvcSchedulingStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/SSS0SoaSvcSchedulingStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>SSS0SoaSvcSchedulingTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/SSS0SoaSvcSchedulingTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>tcgatewaystubs</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/tcgatewaystubs.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>tcmemjavabinding</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/tcmemjavabinding.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>tcserverjavabinding</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/tcserverjavabinding.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaAdministrationLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaAdministrationLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaAdministrationStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaAdministrationStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaAdministrationTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaAdministrationTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaAiLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaAiLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaAiStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaAiStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaAiTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaAiTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaAllocationsLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaAllocationsLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaAllocationsStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaAllocationsStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaAllocationsTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaAllocationsTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaAsbAsmAlignmentLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaAsbAsmAlignmentLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaAsbAsmAlignmentStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaAsbAsmAlignmentStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaAsbAsmAlignmentTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaAsbAsmAlignmentTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaAsBuiltLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaAsBuiltLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaAsBuiltStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaAsBuiltStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaAsBuiltTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaAsBuiltTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaAsMaintainedLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaAsMaintainedLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaAsMaintainedStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaAsMaintainedStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaAsMaintainedTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaAsMaintainedTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaAuthorizedDataAccessLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaAuthorizedDataAccessLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaAuthorizedDataAccessStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaAuthorizedDataAccessStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaAuthorizedDataAccessTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaAuthorizedDataAccessTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaBomLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaBomLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaBomStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaBomStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaBomTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaBomTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaBusinessModelerLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaBusinessModelerLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaBusinessModelerStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaBusinessModelerStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaBusinessModelerTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaBusinessModelerTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaCadBomAlignmentLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaCadBomAlignmentLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaCadBomAlignmentStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaCadBomAlignmentStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaCadBomAlignmentTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaCadBomAlignmentTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaCadLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaCadLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaCadStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaCadStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaCadTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaCadTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaCaeLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaCaeLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaCaeStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaCaeStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaCaeTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaCaeTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaCalendarManagementLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaCalendarManagementLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaCalendarManagementStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaCalendarManagementStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaCalendarManagementTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaCalendarManagementTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaChangeManagementLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaChangeManagementLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaChangeManagementStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaChangeManagementStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaChangeManagementTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaChangeManagementTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaClassificationLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaClassificationLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaClassificationStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaClassificationStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaClassificationTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaClassificationTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaClient_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaClient_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaCommon_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaCommon_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaConfigurationLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaConfigurationLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaConfigurationStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaConfigurationStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaConfigurationTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaConfigurationTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaContMgmtBaseLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaContMgmtBaseLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaContMgmtBaseStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaContMgmtBaseStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaContMgmtBaseTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaContMgmtBaseTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaCoreLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaCoreLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaCoreStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaCoreStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaCoreTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaCoreTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaDocumentManagementLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaDocumentManagementLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaDocumentManagementStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaDocumentManagementStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaDocumentManagementTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaDocumentManagementTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaGlobalMultiSiteLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaGlobalMultiSiteLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaGlobalMultiSiteStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaGlobalMultiSiteStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaGlobalMultiSiteTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaGlobalMultiSiteTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaImportExportLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaImportExportLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaImportExportStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaImportExportStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaImportExportTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaImportExportTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaIssueManagementLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaIssueManagementLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaIssueManagementStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaIssueManagementStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaIssueManagementTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaIssueManagementTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaManufacturingLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaManufacturingLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaManufacturingStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaManufacturingStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaManufacturingTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaManufacturingTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaMESLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaMESLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaMESStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaMESStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaMESTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaMESTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaMROCoreLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaMROCoreLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaMROCoreStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaMROCoreStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaMROCoreTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaMROCoreTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaMultisiteLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaMultisiteLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaMultisiteStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaMultisiteStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaMultisiteTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaMultisiteTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaParameterManagementLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaParameterManagementLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaParameterManagementStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaParameterManagementStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaParameterManagementTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaParameterManagementTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaProductionManagementLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaProductionManagementLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaProductionManagementStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaProductionManagementStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaProductionManagementTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaProductionManagementTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaProjectManagementLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaProjectManagementLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaProjectManagementStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaProjectManagementStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaProjectManagementTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaProjectManagementTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaQueryLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaQueryLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaQueryStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaQueryStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaQueryTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaQueryTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaRdvLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaRdvLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaRdvStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaRdvStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaRdvTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaRdvTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaReportsLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaReportsLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaReportsStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaReportsStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaReportsTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaReportsTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaRequirementsManagementLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaRequirementsManagementLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaRequirementsManagementStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaRequirementsManagementStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaRequirementsManagementTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaRequirementsManagementTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaSrmIntegrationLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaSrmIntegrationLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaSrmIntegrationStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaSrmIntegrationStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaSrmIntegrationTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaSrmIntegrationTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelAdsChangeManagement_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelAdsChangeManagement_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelAdsFoundation_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelAdsFoundation_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelAsBuilt_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelAsBuilt_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelAsMaintained_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelAsMaintained_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelBrndMgmt_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelBrndMgmt_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelCba_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelCba_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelCcdm_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelCcdm_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelCdm0ContractManagement_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelCdm0ContractManagement_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelClassificationCore_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelClassificationCore_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelCmtEbop_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelCmtEbop_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelCmtEmserver_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelCmtEmserver_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelCmtPadTwp_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelCmtPadTwp_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelCm_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelCm_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelContmgmtBase_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelContmgmtBase_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelContmgmtDita_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelContmgmtDita_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelContmgmtS1000d40_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelContmgmtS1000d40_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelContmgmtS1000d_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelContmgmtS1000d_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelCpdCore_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelCpdCore_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelCpgMaterials_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelCpgMaterials_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelDiagramming_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelDiagramming_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelDpv_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelDpv_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelEdaLibrary_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelEdaLibrary_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelEdaServer_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelEdaServer_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelEmps_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelEmps_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelEsddm_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelEsddm_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelEsmBase_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelEsmBase_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelEsmProcessor_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelEsmProcessor_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelEsmSoftware_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelEsmSoftware_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelFnshmgmt_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelFnshmgmt_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelFpMgmt_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelFpMgmt_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelGmo_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelGmo_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelHrn_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelHrn_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelIssuemgmt_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelIssuemgmt_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelLibraryManagement_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelLibraryManagement_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelMaterialMgmt_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelMaterialMgmt_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelMDConnectivity_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelMDConnectivity_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelMesIssueMgmt_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelMesIssueMgmt_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelMES_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelMES_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelModelCore_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelModelCore_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelMROCore_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelMROCore_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelNX0tcin_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelNX0tcin_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelNXP0pid_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelNXP0pid_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelPartition_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelPartition_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelPenetrationmgmt_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelPenetrationmgmt_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelPkgArt_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelPkgArt_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelPlp0ProdLinePlan_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelPlp0ProdLinePlan_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelPMI_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelPMI_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelProductVariant_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelProductVariant_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelRealization_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelRealization_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelScdt_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelScdt_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelScmCc_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelScmCc_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelServiceEventManagement_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelServiceEventManagement_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelServiceProcessing_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelServiceProcessing_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelServiceRequest_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelServiceRequest_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelSmdsysmodeling_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelSmdsysmodeling_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelSpecMgr_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelSpecMgr_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelSSPSPRAlignment_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelSSPSPRAlignment_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelStockMaterial_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelStockMaterial_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelSystemsEngineering_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelSystemsEngineering_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelTcae_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelTcae_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelTransactionProcessing_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelTransactionProcessing_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelVendorManagement_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelVendorManagement_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelWeldManagement_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelWeldManagement_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModelWorkPackageManagement_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModelWorkPackageManagement_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStrongModel_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStrongModel_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStructureManagementLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStructureManagementLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStructureManagementStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStructureManagementStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaStructureManagementTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaStructureManagementTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaSvcProcessingLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaSvcProcessingLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaSvcProcessingStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaSvcProcessingStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaSvcProcessingTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaSvcProcessingTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaSvcRequestLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaSvcRequestLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaSvcRequestStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaSvcRequestStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaSvcRequestTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaSvcRequestTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaSystemsEngineeringLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaSystemsEngineeringLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaSystemsEngineeringStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaSystemsEngineeringStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaSystemsEngineeringTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaSystemsEngineeringTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaTranslationLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaTranslationLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaTranslationStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaTranslationStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaTranslationTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaTranslationTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaVendorManagementLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaVendorManagementLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaVendorManagementStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaVendorManagementStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaVendorManagementTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaVendorManagementTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaVisualizationLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaVisualizationLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaVisualizationStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaVisualizationStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaVisualizationTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaVisualizationTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaWireHarnessLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaWireHarnessLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaWireHarnessStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaWireHarnessStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaWireHarnessTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaWireHarnessTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaWorkflowLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaWorkflowLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaWorkflowStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaWorkflowStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>TcSoaWorkflowTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/TcSoaWorkflowTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>tctp_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/tctp_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>teamcenter_sso_applib</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/teamcenter_sso_applib.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>teamcenter_sso_common</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/teamcenter_sso_common.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>teamcenter_sso_ldapcustom</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/teamcenter_sso_ldapcustom.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>teamcenter_sso_webtoolkit</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/teamcenter_sso_webtoolkit.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Tgm0SoaStrongModelTargetManagement_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Tgm0SoaStrongModelTargetManagement_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Tgm0SoaTargetManagementLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Tgm0SoaTargetManagementLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Tgm0SoaTargetManagementStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Tgm0SoaTargetManagementStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Tgm0SoaTargetManagementTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Tgm0SoaTargetManagementTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Tm0SoaStrongModelTestManagement_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Tm0SoaStrongModelTestManagement_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Tm0SoaTestManagementLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Tm0SoaTestManagementLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Tm0SoaTestManagementStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Tm0SoaTestManagementStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Tm0SoaTestManagementTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Tm0SoaTestManagementTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Val0SoaNXValidationLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Val0SoaNXValidationLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Val0SoaNXValidationStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Val0SoaNXValidationStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Val0SoaNXValidationTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Val0SoaNXValidationTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>Val0SoaStrongModelNXValidation_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/Val0SoaStrongModelNXValidation_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>WdM0SoaWeldManagementLoose_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/WdM0SoaWeldManagementLoose_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>WdM0SoaWeldManagementStrong_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/WdM0SoaWeldManagementStrong_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>WdM0SoaWeldManagementTypes_11000.2.0</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/WdM0SoaWeldManagementTypes_11000.2.0.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>ws-commons-util-1.0.2</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/ws-commons-util-1.0.2.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>xercesImpl-2.9.1</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/xercesImpl-2.9.1.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>xmlrpc-client-3.1.3</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/xmlrpc-client-3.1.3.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>xmlrpc-common-3.1.3</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/xmlrpc-common-3.1.3.jar</systemPath>
+		</dependency>
+		
+		<dependency> 
+			<groupId>com.xy</groupId>
+			<artifactId>xmlrpc-server-3.1.3</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/xmlrpc-server-3.1.3.jar</systemPath>
+		</dependency>
+				
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			
+			<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <webResources>
+                        <resource>
+                            <directory>${project.basedir}/libs</directory>
+                            <targetPath>WEB-INF/lib</targetPath>
+                            <filtering>false</filtering>
+                            <includes>
+                                <include>**/*.jar</include>
+                            </includes>
+                        </resource>
+                    </webResources>
+                </configuration>
+             </plugin>
+		</plugins>
+	</build>
+
+</project>
